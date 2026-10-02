@@ -1,0 +1,22 @@
+PLANO ENCONTRADO (1 acoes):
+1. t=0: mover bloco 'b' para a MESA em p=2
+
+ESTADO FINAL (t=1):
+a: ponto inicial p=0, nivel l=1
+b: ponto inicial p=2, nivel l=0
+c: ponto inicial p=0, nivel l=0
+d: ponto inicial p=3, nivel l=0
+
+RELACOES 'on' em t=1:
+a esta sobre: c
+b esta na MESA
+c esta na MESA
+d esta na MESA
+
+ORDEM PARCIAL (A —P→ B), reduzida transitivamente:
+
+ESTADOS (t: bloco@ponto/nivel)
+t=0: a@0/1  b@1/1  c@0/0  d@3/0
+t=1: a@0/1  b@2/0  c@0/0  d@3/0
+
+VERIFICACAO: plano valido no oraculo = True; linearizacoes validas da ordem parcial = 1/1

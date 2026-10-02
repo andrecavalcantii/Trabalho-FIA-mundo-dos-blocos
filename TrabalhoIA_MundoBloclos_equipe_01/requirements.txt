@@ -1,0 +1,1 @@
+python-sat>=1.8   # MiniSat 2.2 embutido; dispensável se o binário `minisat` estiver instalado

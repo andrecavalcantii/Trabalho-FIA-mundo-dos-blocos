@@ -1,0 +1,28 @@
+PLANO ENCONTRADO (3 acoes):
+1. t=0: mover bloco 'd' para CIMA de 'c' em p=0
+2. t=1: mover bloco 'a' para CIMA de 'b' em p=5
+3. t=2: mover bloco 'd' para a MESA em p=2
+
+ESTADO FINAL (t=3):
+a: ponto inicial p=5, nivel l=1
+b: ponto inicial p=5, nivel l=0
+c: ponto inicial p=0, nivel l=0
+d: ponto inicial p=2, nivel l=0
+
+RELACOES 'on' em t=3:
+a esta sobre: b
+b esta na MESA
+c esta na MESA
+d esta na MESA
+
+ORDEM PARCIAL (A —P→ B), reduzida transitivamente:
+  acao 1 < acao 2  [causal: celula(slot 3, nivel 1), celula(slot 5, nivel 1)]
+  acao 2 < acao 3  [causal: celula(slot 3, nivel 0)]
+
+ESTADOS (t: bloco@ponto/nivel)
+t=0: a@3/0  b@5/0  c@0/0  d@3/1
+t=1: a@3/0  b@5/0  c@0/0  d@0/1
+t=2: a@5/1  b@5/0  c@0/0  d@0/1
+t=3: a@5/1  b@5/0  c@0/0  d@2/0
+
+VERIFICACAO: plano valido no oraculo = True; linearizacoes validas da ordem parcial = 1/1

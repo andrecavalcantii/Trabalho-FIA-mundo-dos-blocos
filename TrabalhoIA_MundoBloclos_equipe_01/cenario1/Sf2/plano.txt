@@ -1,0 +1,46 @@
+PLANO ENCONTRADO (9 acoes):
+1. t=0: mover bloco 'c' para a MESA em p=1
+2. t=1: mover bloco 'd' para CIMA de 'c' em p=0
+3. t=2: mover bloco 'a' para a MESA em p=0
+4. t=3: mover bloco 'd' para CIMA de 'c' em p=1
+5. t=4: mover bloco 'b' para CIMA de 'a' em p=0
+6. t=5: mover bloco 'd' para a MESA em p=3
+7. t=6: mover bloco 'c' para CIMA de 'd' em p=4
+8. t=7: mover bloco 'b' para CIMA de 'c' em p=5
+9. t=8: mover bloco 'a' para CIMA de 'c' em p=4
+
+ESTADO FINAL (t=9):
+a: ponto inicial p=4, nivel l=2
+b: ponto inicial p=5, nivel l=2
+c: ponto inicial p=4, nivel l=1
+d: ponto inicial p=3, nivel l=0
+
+RELACOES 'on' em t=9:
+a esta sobre: c
+b esta sobre: c
+c esta sobre: d
+d esta na MESA
+
+ORDEM PARCIAL (A —P→ B), reduzida transitivamente:
+  acao 1 < acao 2  [causal: celula(slot 0, nivel 0), celula(slot 1, nivel 0), celula(slot 2, nivel 0)...]
+  acao 2 < acao 3  [causal: celula(slot 3, nivel 1)]
+  acao 3 < acao 4  [causal: celula(slot 3, nivel 0)]
+  acao 4 < acao 5  [causal: celula(slot 0, nivel 1)]
+  acao 5 < acao 6  [causal: celula(slot 5, nivel 0)]
+  acao 6 < acao 7  [causal: celula(slot 1, nivel 1), celula(slot 2, nivel 1), celula(slot 4, nivel 0)...]
+  acao 7 < acao 8  [causal: celula(slot 5, nivel 1), posicao de 'c']
+  acao 8 < acao 9  [causal: celula(slot 0, nivel 1)]
+
+ESTADOS (t: bloco@ponto/nivel)
+t=0: a@3/0  b@5/0  c@0/0  d@3/1
+t=1: a@3/0  b@5/0  c@1/0  d@3/1
+t=2: a@3/0  b@5/0  c@1/0  d@0/1
+t=3: a@0/0  b@5/0  c@1/0  d@0/1
+t=4: a@0/0  b@5/0  c@1/0  d@1/1
+t=5: a@0/0  b@0/1  c@1/0  d@1/1
+t=6: a@0/0  b@0/1  c@1/0  d@3/0
+t=7: a@0/0  b@0/1  c@4/1  d@3/0
+t=8: a@0/0  b@5/2  c@4/1  d@3/0
+t=9: a@4/2  b@5/2  c@4/1  d@3/0
+
+VERIFICACAO: plano valido no oraculo = True; linearizacoes validas da ordem parcial = 1/1
